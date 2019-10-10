@@ -1,0 +1,25 @@
+{
+  "name": "recipe-project",
+  "version": "1.0.0",
+  "description": "My Project",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forrestdarabian/node-db4-challenge.git"
+  },
+  "author": "Forrest Darabian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Forrestdarabian/node-db4-challenge/issues"
+  },
+  "homepage": "https://github.com/Forrestdarabian/node-db4-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.5",
+    "nodemon": "^1.19.3",
+    "sqlite3": "^4.1.0"
+  }
+}
