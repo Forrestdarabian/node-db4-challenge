@@ -1,12 +1,11 @@
 exports.up = function(knex) {
   return knex.schema
     .createTable("recipes", tbl => {
-      tbl;
       tbl.increments();
       tbl.string("title").notNullable();
     })
     .createTable("ingredients", tbl => {
-      tbl.increments();
+      tbl.increments("id");
       tbl.string("name").notNullable();
       tbl.float("quantity");
     })
@@ -21,11 +20,8 @@ exports.up = function(knex) {
       tbl
         .integer("ingredient_id")
         .unsigned()
-        .notNullable()
         .references("id")
         .inTable("ingredients");
-      tbl.unique(["recipe_id", "ingredient_id"]);
-      //   tbl.string("ingredient_name");
     });
 };
 
